@@ -95,6 +95,19 @@ li {
   list-style: none;
 }
 
+.bottom_shadow {
+  position: fixed;
+  bottom: 0;
+  height: 6vw;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 1, 12, 0.9) 60%,
+    var(--bg-color)
+  );
+  width: 100%;
+  z-index: 1;
+}
+
 .container {
   width: 100%;
   margin-inline: auto;
@@ -106,6 +119,7 @@ header {
   background-size: cover;
   min-height: 100svh;
   position: relative;
+  z-index: 2;
 }
 
 header div {
