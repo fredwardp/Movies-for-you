@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Movies for You</title>
+  </head>
+  <body>
+    <header>
+      <section class="container">
+        <div></div>
+        <h1>Movies <br /><span>for you </span></h1>
+        <p>the best moviedb</p>
+      </section>
+    </header>
+    <main>
+      <div class="container">
+        <p class="subheading">selection</p>
+        <h2>The perfect movie is just one click away</h2>
+        <div class="searchbar">
+          <div class="filter_div">
+            <input
+              class="first_filter"
+              type="button"
+              value="Year up"
+              onclick="yearUp()"
+            />
+            <input
+              class="second_filter"
+              type="button"
+              value="Year down"
+              onclick="yearDown()"
+            />
+            <input
+              class="third_filter"
+              type="button"
+              value="Best rating"
+              onclick="bestRating()"
+            />
+            <div class="empty_bar"></div>
+            <div class="bar_selector"></div>
+          </div>
+          <div class="search_div">
+            <input type="search" id="search" />
+            <input
+              type="button"
+              value="SEARCH"
+              id="search_button"
+              onclick="movieSearch()"
+            />
+          </div>
+        </div>
+        <article class="grid">
+      </div>
+    </main>
+    <script src="./assets/js/movie.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
