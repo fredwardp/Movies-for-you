@@ -111,10 +111,10 @@ header {
 header div {
   background-color: rgba(0, 0, 0, 0.73);
   filter: blur(170.5px);
-  height: 600px;
-  width: 1100px;
+  height: 35vw;
+  width: 75vw;
   position: absolute;
-  top: 7vw;
+  top: 5vw;
   left: -1vw;
 }
 
@@ -182,6 +182,10 @@ h2 {
   cursor: pointer;
 }
 
+.filter_div input:hover {
+  color: white;
+}
+
 .filter_div .third_filter {
   color: white;
 }
@@ -232,10 +236,15 @@ h2 {
   cursor: pointer;
 }
 
+#search_button:hover {
+  background-color: #9f921c;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+  padding-bottom: 5vw;
 }
 
 @media only screen and (min-width: 1800px) {
@@ -268,4 +277,52 @@ h3 {
 h4 {
   /* font-size: 2.2rem; */
   color: #c8bd58;
+}
+
+@media only screen and (max-width: 1025px) {
+  header {
+    min-height: 60svh;
+  }
+  h1 {
+    padding-top: 14vw;
+  }
+  header p {
+    padding-bottom: 10vw;
+  }
+  .container {
+    padding-inline: 7%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .searchbar {
+    flex-direction: column;
+    padding-bottom: 7rem;
+  }
+  .filter_div {
+    width: 100%;
+  }
+  .search_div {
+    height: 40px;
+    width: 60%;
+    margin-inline: auto;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  header {
+    min-height: 80svh;
+  }
+  h1 {
+    padding-top: 25vw;
+  }
+  .search_div {
+    width: 100%;
+  }
+  .container {
+    padding-inline: 5%;
+  }
 }
