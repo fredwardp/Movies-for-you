@@ -48,6 +48,10 @@ body {
   font-size: clamp(1.6rem, 1.43rem + 0.5357vw, 2.8rem);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 img,
 picture,
 svg,
@@ -95,6 +99,36 @@ li {
   list-style: none;
 }
 
+.scrollbar {
+  width: 8px;
+  background-color: #1f202c3a;
+  height: 100svh;
+  position: fixed;
+  right: 0;
+  z-index: 4;
+}
+
+.scrollbar_inner {
+  position: absolute;
+  top: 0;
+  background-color: #9f921c77;
+  scale: 1 0;
+  transform-origin: top;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  border-radius: 0 0 10px 10px;
+
+  animation: newscrollbar linear;
+  animation-timeline: scroll();
+}
+
+@keyframes newscrollbar {
+  to {
+    scale: 1 1;
+  }
+}
+
 .bottom_shadow {
   position: fixed;
   bottom: 0;
@@ -119,7 +153,7 @@ header {
   background-size: cover;
   min-height: 100svh;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 header div {

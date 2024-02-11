@@ -31,11 +31,9 @@ const allMovies = (array) => {
   });
 };
 
-
-
 function movieSearch() {
   const searchInput = document.querySelector("#search").value.toLowerCase();
-  console.log(searchInput);
+  //   console.log(searchInput);
 
   movieFiltered = movies.filter((singleMovie) => {
     return (
@@ -45,7 +43,6 @@ function movieSearch() {
       singleMovie[3].toLowerCase().includes(searchInput.toLowerCase()) ||
       singleMovie[4].join().toLowerCase().includes(searchInput.toLowerCase()) ||
       singleMovie[5] === searchInput
-      
     );
   });
   console.log(movieFiltered);
