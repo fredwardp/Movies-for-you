@@ -111,8 +111,8 @@ li {
 .scrollbar_inner {
   position: absolute;
   top: 0;
-  background-color: #9f921c77;
-  scale: 1 0;
+  background-color: #9f921c;
+  /* scale: 1 0; */
   transform-origin: top;
   height: 100%;
   width: 100%;
@@ -124,8 +124,13 @@ li {
 }
 
 @keyframes newscrollbar {
+  from {
+    scale: 1 0;
+    opacity: 0.1;
+  }
   to {
     scale: 1 1;
+    opacity: 0.5;
   }
 }
 
